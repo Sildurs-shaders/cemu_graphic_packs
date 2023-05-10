@@ -4,28 +4,28 @@ moduleMatches = 0x6267BFD0
 .origin = codecave
 
 const_AspectRatio:
-.float ($gameWidth/$gameHeight)/($width/$height)
+.float (($gameWidth*$VerticalSplitscreen)/($gameHeight*$HorizontalSplitscreen))/(($width*$VerticalSplitscreen)/($height*$HorizontalSplitscreen))
 
 const_AspectRatioHalf:
-.float (($gameWidth/$gameHeight)/($width/$height))/2
+.float ((($gameWidth*$VerticalSplitscreen)/($gameHeight*$HorizontalSplitscreen))/(($width*$VerticalSplitscreen)/($height*$HorizontalSplitscreen)))/2
 
 const_ReverseAspectRatio:
-.float ($width/$height)/($gameWidth/$gameHeight)
+.float (($width*$VerticalSplitscreen)/($height*$HorizontalSplitscreen))/(($gameWidth*$VerticalSplitscreen)/($gameHeight*$HorizontalSplitscreen))
 
 const_ReverseAspectRatio2x:
-.float (($width/$height)/($gameWidth/$gameHeight))*2
+.float ((($width*$VerticalSplitscreen)/($height*$HorizontalSplitscreen))/(($gameWidth*$VerticalSplitscreen)/($gameHeight*$HorizontalSplitscreen)))*2
 
 const_PaddingLeftSide:
-.float (($gameWidth/$gameHeight)/($width/$height)) * ((($width/($height/720))/2) - 640) * (-1)
+.float ((($gameWidth*$VerticalSplitscreen)/($gameHeight*$HorizontalSplitscreen))/(($width*$VerticalSplitscreen)/($height*$HorizontalSplitscreen))) * (((($width*$VerticalSplitscreen)/(($height*$HorizontalSplitscreen)/720))/2) - 640) * (-1)
 
 const_PaddingRightSide:
-.float (($gameWidth/$gameHeight)/($width/$height)) * ((($width/($height/720))/2) - 640)
+.float ((($gameWidth*$VerticalSplitscreen)/($gameHeight*$HorizontalSplitscreen))/(($width*$VerticalSplitscreen)/($height*$HorizontalSplitscreen))) * (((($width*$VerticalSplitscreen)/(($height*$HorizontalSplitscreen)/720))/2) - 640)
 
 const_AltPaddingLeftSide:
-.float (($gameWidth/$gameHeight)/($width/$height)) * (($width/2) - 640) * (-1)
+.float ((($gameWidth*$VerticalSplitscreen)/($gameHeight*$HorizontalSplitscreen))/(($width*$VerticalSplitscreen)/($height*$HorizontalSplitscreen))) * ((($width*$VerticalSplitscreen)/2) - 640) * (-1)
 
 const_AltPaddingRightSide:
-.float (($gameWidth/$gameHeight)/($width/$height)) * (($width/2) - 640)
+.float ((($gameWidth*$VerticalSplitscreen)/($gameHeight*$HorizontalSplitscreen))/(($width*$VerticalSplitscreen)/($height*$HorizontalSplitscreen))) * ((($width*$VerticalSplitscreen)/2) - 640)
 
 
 newLineFormatScreen:
@@ -2437,7 +2437,7 @@ stfs f0, 0x1C(r31)
 b exitScale
 
 const_640:
-.float $gameWidth/2
+.float ($gameWidth*$VerticalSplitscreen)/2
 
 const_1:
 .float 1.0
@@ -2763,7 +2763,7 @@ proj_PosY:
 .float 0.0
 
 proj_ScaleX:
-.float ($gameWidth/$gameHeight)/($width/$height)
+.float (($gameWidth*$VerticalSplitscreen)/($gameHeight*$HorizontalSplitscreen))/(($width*$VerticalSplitscreen)/($height*$HorizontalSplitscreen))
 
 proj_ScaleY:
 .float 1.0
