@@ -2,7 +2,7 @@
 titleIds = 00050000101C9300,00050000101C9400,00050000101C9500
 name = Graphics
 path = "The Legend of Zelda: Breath of the Wild/Graphics"
-description = Allows you to change the game resolution, shadow resolution and anti-aliasing.||Made by Kiri, Skalfate, rajkosto and NAVras.
+description = Allows you to change the game resolution, shadow resolution and anti-aliasing.||Made by Kiri, Skalfate, rajkosto and NAVras. Tweaked for Local Splitscreen Multiplayer by Sildur.
 version = 7
 
 [Default]
@@ -19,6 +19,8 @@ $shadowRes = 1
 $subPix:int = 1.0
 $edgeThreshold:int = 0.125
 $edgeThresholdMin:int = 0.0156
+$VerticalSplitscreen = 1.0
+$HorizontalSplitscreen = 1.0
 
 $shadowNearbyStart = 1.0 # the starting distance should be kept at 1.0
 $shadowNearbyEnd = 1.0
@@ -27,6 +29,20 @@ $shadowFarEnd = 1.0
 
 # Should be set to 1 or 2 (changes verbosity of loggin) when trying to log the layout of panes while they're getting loaded for debugging purposes
 $enableUltrawideDebugLogging:int = 0
+
+# Splitscreen Mode
+
+[Preset]
+name = Horizontal
+category = Splitscreen Mode
+$VerticalSplitscreen = 1.0
+$HorizontalSplitscreen = 0.5
+
+[Preset]
+name = Vertical (Requires Reshade)
+category = Splitscreen Mode
+$VerticalSplitscreen = 0.5
+$HorizontalSplitscreen = 1.0
 
 # Aspect Ratio
 
