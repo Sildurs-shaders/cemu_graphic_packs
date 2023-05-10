@@ -33,6 +33,12 @@ $enableUltrawideDebugLogging:int = 0
 # Splitscreen Mode
 
 [Preset]
+name = Off
+category = Splitscreen Mode
+$VerticalSplitscreen = 1.0
+$HorizontalSplitscreen = 1.0
+
+[Preset]
 name = Horizontal
 category = Splitscreen Mode
 $VerticalSplitscreen = 1.0
